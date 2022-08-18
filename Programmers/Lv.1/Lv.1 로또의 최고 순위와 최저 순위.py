@@ -1,7 +1,6 @@
 '''
 https://school.programmers.co.kr/learn/courses/30/lessons/77484
 
-
 [문제]
 
 로또 6/45(이하 '로또'로 표기)는 1부터 45까지의 숫자 중 6개를 찍어서 맞히는 대표적인 복권입니다. 

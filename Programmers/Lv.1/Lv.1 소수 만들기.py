@@ -1,7 +1,6 @@
 '''
 https://school.programmers.co.kr/learn/courses/30/lessons/12977
 
-
 [문제]
 
 주어진 숫자 중 3개의 수를 더했을 때 소수가 되는 경우의 개수를 구하려고 합니다. 
