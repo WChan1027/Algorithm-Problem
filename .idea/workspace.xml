@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="77d5e261-2cf0-4a03-9b42-353560de2643" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Programmers/Lv.1/Lv.1 2016년.py" beforeDir="false" afterPath="$PROJECT_DIR$/Programmers/Lv.1/Lv.1 2016년.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,20 +40,17 @@
       </console-settings>
     </option>
   </component>
-  <component name="RunManager" selected="Python.9653. 스타워즈 로고">
-    <configuration name="9086. 문자열" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.Lv.1 실패율">
+    <configuration name="10170. NFC West vs North" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Problem Solve" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Baekjoon/Bronze" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Baekjoon/Bronze/9086. 문자열.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Baekjoon/Bronze/10170. NFC West vs North.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -65,6 +63,9 @@
       <module name="Problem Solve" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Baekjoon/Bronze" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -83,6 +84,9 @@
       <module name="Problem Solve" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Programmers/Lv.1" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -101,6 +105,9 @@
       <module name="Problem Solve" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Programmers/Lv.1" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -115,7 +122,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Lv.1 [1차] 다트 게임" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="Lv.1 실패율" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Problem Solve" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -124,7 +131,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Programmers/Lv.1/Lv.1 [1차] 다트 게임.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Programmers/Lv.1/Lv.1 실패율.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -135,11 +142,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Lv.1 실패율" />
+        <item itemvalue="Python.10170. NFC West vs North" />
         <item itemvalue="Python.9653. 스타워즈 로고" />
         <item itemvalue="Python.Lv.1 2016년" />
         <item itemvalue="Python.Lv.1 [1차] 비밀지도" />
-        <item itemvalue="Python.Lv.1 [1차] 다트 게임" />
-        <item itemvalue="Python.9086. 문자열" />
       </list>
     </recent_temporary>
   </component>
