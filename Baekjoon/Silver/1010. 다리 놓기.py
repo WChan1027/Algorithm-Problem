@@ -12,21 +12,16 @@ https://www.acmicpc.net/problem/1010
 
 '''
 
-def bridge(N, M):
-    answer = 0
-    if N == 1:
-        return M
-
-    for i in range(1, N):
-        answer += bridge(N - i, M - i)
-
-    return answer
+def factorial(n):
+    result = 1
+    for i in range(1, n+1):
+        result *= i
+    return result
 
 T = int(input())
 
 for test_case in range(T):
     N, M = map(int, input().split())
-    result = []
-    answer = bridge(N, M)
+    answer = factorial(M)//factorial(N)//factorial(M-N)
 
     print(answer)
