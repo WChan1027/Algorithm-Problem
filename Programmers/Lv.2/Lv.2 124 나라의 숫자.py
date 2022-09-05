@@ -35,12 +35,13 @@ def solution(n):
         num.append(n % 3)
         n = n // 3
     num = num[::-1]
-    for i in range(len(num)):
-        if num[i] == 0:
-            num[i] = 3
-            num[i-1] -= 1
-    if num[0] == 0:
-        num.pop(0)
+    while 0 in num:
+        for i in range(len(num)):
+            if num[i] == 0:
+                num[i] = 3
+                num[i-1] -= 1
+        if num[0] == 0:
+            num.pop(0)
 
     for i in num:
         if i == 3:
@@ -49,5 +50,3 @@ def solution(n):
             answer += str(i)
 
     return answer
-
-print(solution(10))
