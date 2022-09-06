@@ -21,10 +21,3 @@ https://school.programmers.co.kr/learn/courses/30/lessons/60057
 
 '''
 
-def solution(s):
-    answer = len(s)
-    for i in range(1, len(s)):
-        for j in range(i+1):
-            if s[j::i] == :
-                if
-    return answer
