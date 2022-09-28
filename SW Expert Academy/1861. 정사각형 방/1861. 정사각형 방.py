@@ -12,7 +12,6 @@ for test_case in range(1, T+1):
     result = [N*N, 0]
 
     for i in range(N):
-        count = 1
         for j in range(N):
             count = 1
             a, b = i, j
