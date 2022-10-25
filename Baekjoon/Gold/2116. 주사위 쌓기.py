@@ -19,6 +19,7 @@ https://www.acmicpc.net/problem/2116
 한 옆면의 숫자의 합의 최댓값을 구하는 프로그램을 작성하시오.
 
 '''
+
 import sys
 sys.stdin = open('input.txt')
 N = int(input())
