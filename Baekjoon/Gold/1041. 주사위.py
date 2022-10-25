@@ -42,6 +42,10 @@ for i in range(len(num)-2):
             else:
                 sum_three_num.append(num[i] + num[j] + num[k])
 
-sum_num = (N-1)*6*(min(sum_two_num)) + (N-1)*(N-1)*5*(min(num)) + 4*(min(sum_three_num))
+sum_num = ((N-1)*4 + (N-2)*4)*(min(sum_two_num)) + ((N-1)*(N-2)*4 + (N-2)*(N-2))*(min(num)) + 4*(min(sum_three_num))
 
+if N == 1:
+    sum_num = sum(num) - max(num)
+elif N == 2:
+    sum_num = 4*(min(sum_two_num) + min(sum_three_num))
 print(sum_num)
