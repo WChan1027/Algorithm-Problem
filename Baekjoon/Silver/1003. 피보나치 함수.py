@@ -30,3 +30,16 @@ fibonacci(3)은 fibonacci(2)와 fibonacci(1)의 결과를 얻고, 2를 리턴한
 
 '''
 
+T = int(input())
+
+a = [0] * 41
+b = [0] * 41
+a[0], a[2], a[3] = 1, 1, 1
+b[1], b[2], b[3] = 1, 1, 2
+for i in range(4, 41):
+    a[i] = a[i - 1] + a[i - 2]
+    b[i] = b[i - 1] + b[i - 2]
+
+for _ in range(T):
+    N = int(input())
+    print(a[N], b[N])
