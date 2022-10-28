@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="77d5e261-2cf0-4a03-9b42-353560de2643" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Baekjoon/Bronze/2438. 별 찍기 - 1.py" beforeDir="false" afterPath="$PROJECT_DIR$/Baekjoon/Bronze/2438. 별 찍기 - 1.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,17 +40,17 @@
       </console-settings>
     </option>
   </component>
-  <component name="RunManager" selected="Python.7568. 덩치">
-    <configuration name="2164. 카드2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.10816. 숫자 카드 2">
+    <configuration name="10250. ACM 호텔" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Problem Solve" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Baekjoon/Silver" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Baekjoon/Bronze" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Baekjoon/Silver/2164. 카드2.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Baekjoon/Bronze/10250. ACM 호텔.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -58,7 +59,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="2751. 수 정렬하기 2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="10816. 숫자 카드 2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Problem Solve" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -67,7 +68,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Baekjoon/Silver/2751. 수 정렬하기 2.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Baekjoon/Silver/10816. 숫자 카드 2.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -76,16 +77,16 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="2839. 설탕 배달" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="11050. 이항 계수 1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Problem Solve" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Baekjoon/Silver" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Baekjoon/Bronze" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Baekjoon/Silver/2839. 설탕 배달.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Baekjoon/Bronze/11050. 이항 계수 1.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -94,16 +95,16 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="4949. 균형잡힌 세상" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="2798. 블랙잭" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Problem Solve" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Baekjoon/Silver" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Baekjoon/Bronze" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Baekjoon/Silver/4949. 균형잡힌 세상.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Baekjoon/Bronze/2798. 블랙잭.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -112,7 +113,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="7568. 덩치" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="9012. 괄호" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Problem Solve" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -121,7 +122,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Baekjoon/Silver/7568. 덩치.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Baekjoon/Silver/9012. 괄호.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="true" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -132,11 +133,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.7568. 덩치" />
-        <item itemvalue="Python.4949. 균형잡힌 세상" />
-        <item itemvalue="Python.2839. 설탕 배달" />
-        <item itemvalue="Python.2751. 수 정렬하기 2" />
-        <item itemvalue="Python.2164. 카드2" />
+        <item itemvalue="Python.10816. 숫자 카드 2" />
+        <item itemvalue="Python.9012. 괄호" />
+        <item itemvalue="Python.11050. 이항 계수 1" />
+        <item itemvalue="Python.10250. ACM 호텔" />
+        <item itemvalue="Python.2798. 블랙잭" />
       </list>
     </recent_temporary>
   </component>
