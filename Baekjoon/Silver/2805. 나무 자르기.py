@@ -25,8 +25,12 @@ N, M = map(int, sys.stdin.readline().split())
 
 tree = list(map(int, sys.stdin.readline().split()))
 
-def is_answer(start, end, M, 0):
-    middle = (end + start)//2
+def is_answer(start, end, M):
+    if start > end:
+        print(end)
+        return
+
+    middle = (start + end)//2
     total = 0
     for i in range(len(tree)):
         if tree[i] > middle:
@@ -34,7 +38,12 @@ def is_answer(start, end, M, 0):
 
     if total > M:
         start = middle + 1
-        is_answer(start, end, M, 1)
+        is_answer(start, end, M)
     elif total < M:
         end = middle - 1
-        is_answer(start, end, M, 2)
+        is_answer(start, end, M)
+    else:
+        print(middle)
+        return
+
+is_answer(0, 2000000001, M)

@@ -17,10 +17,18 @@ N명의 집단에서 각 사람의 덩치 등수는 자신보다 더 "큰 덩치
 여러분은 학생 N명의 몸무게와 키가 담긴 입력을 읽어서 각 사람의 덩치 등수를 계산하여 출력해야 한다.
 
 '''
-
-N = int(input())
+import sys
+N = int(sys.stdin.readline())
 
 size = [list(map(int, input().split())) for _ in range(N)]
 
-print(size)
+place = [0] * N
 
+for i in range(len(size)):
+    n = 1
+    for j in range(len(size)):
+        if size[i][0] < size[j][0] and size[i][1] < size[j][1]:
+            n += 1
+    place[i] = n
+
+print(*place)
