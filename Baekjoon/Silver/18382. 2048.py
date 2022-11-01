@@ -39,21 +39,21 @@ def move_left(puzzle):
         idx = 0         # 쌓이는 가장 아래쪽
         for j in range(1, 4):       # 선택된 행의 가장 아래쪽+1 부터 확인
             if puzzle[i][j] != 0:       # 퍼즐이 비어있지 않으면
-                if idx != j:        # 현재 위치
-                    if puzzle[i][idx] == puzzle[i][j]:
-                        puzzle[i][idx] *= 2
-                        puzzle[i][j] = 0
-                        plus += puzzle[i][idx]
-                        idx += 1
-                    elif puzzle[i][idx] == 0:
-                        puzzle[i][idx] = puzzle[i][j]
-                        puzzle[i][j] = 0
-                    else:
-                        idx += 1
-                        puzzle[i][idx] = puzzle[i][j]
-                        if idx != j:
-                            puzzle[i][j] = 0
-    return plus
+                if idx != j:        # 현재 위치 != 쌓을 위치면
+                    if puzzle[i][idx] == puzzle[i][j]:      # 현재 선택된 퍼즐과 쌓을 위치의 퍼즐의 숫자가 같으면
+                        puzzle[i][idx] *= 2     # 쌓을 위치의 숫자 * 2
+                        puzzle[i][j] = 0        # 현재 선택된 퍼즐 위치 비우기
+                        plus += puzzle[i][idx]      # 점수 추가
+                        idx += 1        # 쌓을 위치 +1
+                    elif puzzle[i][idx] == 0:       # 쌓을 위치의 숫자가 0이면
+                        puzzle[i][idx] = puzzle[i][j]       # 현재 선택된 퍼즐을 쌓을 위치로 이동
+                        puzzle[i][j] = 0        # 현재 선택된 퍼즐 위치 비우기
+                    else:       # 현재 선택된 퍼즐과 쌓을 위치의 퍼즐의 숫자가 같지 않으면
+                        idx += 1        # 쌓을 위치 +1
+                        puzzle[i][idx] = puzzle[i][j]       # 현재 선택된 퍼즐을 쌓을 위치로 이동
+                        if idx != j:        # 현재 위치 != 쌓을 위치면
+                            puzzle[i][j] = 0        # 현재 선택된 퍼즐 위치 비우기
+    return plus     # 얻은 점수 반환
 
 # Up
 def move_up(puzzle):
@@ -124,10 +124,11 @@ def move_down(puzzle):
                             puzzle[i][j] = 0
     return plus
 
-index = -1
-while index < len(move)-1:
-    index += 1
-    if index % 4 == 0:
+index = -1      # 순회할 move 위치
+while index < len(move)-1:      # move가 끝날 때까지 반복
+    index += 1      # move 위치 +1
+    # 4개마다 명령 반복
+    if index % 4 == 0:      # 이동할 방향에 따라 함수 실행 
         if move[index] == 'L':
             S += move_left(puzzle)
         elif move[index] == 'U':
@@ -137,12 +138,12 @@ while index < len(move)-1:
         else:
             S += move_down(puzzle)
 
-    elif index % 4 == 1:
+    elif index % 4 == 1:        # 새로 생길 숫자의 크기
         num = int(move[index])
-    elif index % 4 == 2:
+    elif index % 4 == 2:        # 새로 생길 숫자의 행 좌표
         column = int(move[index])
-    else:
+    else:       # 새로 생길 숫자의 열 좌표
         row = int(move[index])
-        puzzle[column][row] = num
+        puzzle[column][row] = num       # puzzle에 새로운 숫자 등록
 
 print(S)

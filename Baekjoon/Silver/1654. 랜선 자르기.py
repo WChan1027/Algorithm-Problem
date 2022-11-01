@@ -17,7 +17,9 @@ N개보다 많이 만드는 것도 N개를 만드는 것에 포함된다.
 '''
 
 K, N = map(int, input().split())
-length = []
+
+# 이진 탐색
+length = []     # 가지고 있는 랜선의 길이
 for i in range(K):
     length.append(int(input()))
 
@@ -26,12 +28,12 @@ end = max(length)
 
 while start <= end:
     mid = (start + end) // 2
-    EA = 0
-    for i in length:
+    EA = 0      # 랜선의 갯수
+    for i in length:        # 각 랜선 별 만들어지는 랜선의 갯수
         EA += i // mid
-    if EA >= N:
-        start = mid + 1
-    else:
-        end = mid - 1
+    if EA >= N:     # 만들어지는 총 랜선의 갯수가 N 보다 크면
+        start = mid + 1     # 길이를 더 길게 잘라본다
+    else:       # 만들어지는 총 랜선의 갯수가 N 보다 작으면
+        end = mid - 1       # 길이를 더 짧게 잘라본다
 
 print(end)
