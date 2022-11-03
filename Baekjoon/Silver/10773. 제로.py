@@ -12,3 +12,12 @@ https://www.acmicpc.net/problem/10773
 import sys
 K = int(sys.stdin.readline())
 
+num = []
+for _ in range(K):
+    n = int(sys.stdin.readline())
+    if n == 0:
+        num.pop()
+    else:
+        num.append(n)
+
+print(sum(num))

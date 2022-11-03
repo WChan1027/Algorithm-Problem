@@ -120,5 +120,12 @@ coin = [int(sys.stdin.readline().strip()) for _ in range(n)]
 
 # 5
 
-coin_answer = []
-def coin_count(n):
+coin_answer = [0] * (k+1)
+coin_answer[0] = 1
+
+for i in coin:
+    for j in range(i, k+1):
+        if j-i >= 0:
+            coin_answer[j] += coin_answer[j-i]
+
+print(coin_answer[k])
