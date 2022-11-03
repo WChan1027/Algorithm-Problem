@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="77d5e261-2cf0-4a03-9b42-353560de2643" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Baekjoon/Gold/1041. 주사위.py" beforeDir="false" afterPath="$PROJECT_DIR$/Baekjoon/Gold/1041. 주사위.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Baekjoon/Silver/1654. 랜선 자르기.py" beforeDir="false" afterPath="$PROJECT_DIR$/Baekjoon/Silver/1654. 랜선 자르기.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Baekjoon/Silver/18382. 2048.py" beforeDir="false" afterPath="$PROJECT_DIR$/Baekjoon/Silver/18382. 2048.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -118,6 +115,9 @@
       <module name="Problem Solve" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Baekjoon/Gold" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -136,6 +136,9 @@
       <module name="Problem Solve" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Baekjoon/Silver" />
       <option name="IS_MODULE_SDK" value="true" />
