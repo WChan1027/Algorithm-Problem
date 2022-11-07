@@ -22,10 +22,44 @@ sys.stdin = open('input.txt')
 N = int(sys.stdin.readline())
 
 building = [list(map(int, sys.stdin.readline().split())) for _ in range(N)]
-time = [0] * N
+built = [[0]*N for _ in range(N)]
+time = []
 for i in range(N):
-    time[i] = building[i][0]
+    for j in building[i][1:-1]:
+        if j == -1:
+            break
+        else:
+            built[i][j-1] = 1
+
+# for i in range(N):
+#     stack = []
+#     visited = [0] * N
+#     t = 0
+#     stack.append(i)
+#     visited[i] = 0
+#     while stack:
+#         x = stack.pop(0)
+#         t += building[x][0]
+#         for j in range(N):
+#             if built[x][j] == 1 and visited[j] == 0:
+#                 visited[j] = 1
+#                 stack.append(j)
+#     time[i] = t
+
 
 for i in range(N):
-    for j in building[i]:
-        if
+    stack = []
+    visited = [0] * N
+    order = []
+    stack.append(i)
+    visited[i] = 0
+    while stack:
+        x = stack.pop(0)
+        order.insert(0, x)
+        for j in range(N):
+            if built[x][j] == 1 and visited[j] == 0:
+                visited[j] = 1
+                stack.append(j)
+    time.append(order)
+
+print(time)
