@@ -16,50 +16,103 @@ https://www.acmicpc.net/problem/1516
 
 '''
 import sys
+from collections import deque
 
 sys.stdin = open('input.txt')
 
 N = int(sys.stdin.readline())
 
-building = [list(map(int, sys.stdin.readline().split())) for _ in range(N)]
-built = [[0]*N for _ in range(N)]
-time = []
+indegree = [0]*(N+1)
+graph = [[]for _ in range(N+1)]
+time = [0]*N
+
 for i in range(N):
-    for j in building[i][1:-1]:
+    building = list(map(int, sys.stdin.readline().split()))
+    time[i] = building[0]
+    for j in building[1:]:
         if j == -1:
             break
         else:
-            built[i][j-1] = 1
+            graph[i].append(j-1)
 
-# for i in range(N):
-#     stack = []
-#     visited = [0] * N
-#     t = 0
-#     stack.append(i)
-#     visited[i] = 0
-#     while stack:
-#         x = stack.pop(0)
-#         t += building[x][0]
-#         for j in range(N):
-#             if built[x][j] == 1 and visited[j] == 0:
-#                 visited[j] = 1
-#                 stack.append(j)
-#     time[i] = t
+order = []
+for j in range(N):
+    a = []
+    stack = deque()
 
+    for i in range(1, N+1):
+        if indegree[i] == 0:
+            stack.append(i)
 
-for i in range(N):
-    stack = []
-    visited = [0] * N
-    order = []
-    stack.append(i)
-    visited[i] = 0
     while stack:
-        x = stack.pop(0)
-        order.insert(0, x)
-        for j in range(N):
-            if built[x][j] == 1 and visited[j] == 0:
-                visited[j] = 1
-                stack.append(j)
-    time.append(order)
+        now = stack.popleft()
+        order.append(now)
 
-print(time)
+        for i in graph[now]:
+            indegree[i] -= 1
+
+            if indegree[i] == 0:
+                stack.append(i)
+
+    order.append(a)
+print(order)
+
+
+# building = [list(map(int, sys.stdin.readline().split())) for _ in range(N)]
+# built = [[0]*N for _ in range(N)]
+# time = []
+# for i in range(N):
+#     for j in building[i][1:-1]:
+#         if j == -1:
+#             break
+#         else:
+#             built[i][j-1] = 1
+#
+# # for i in range(N):
+# #     stack = []
+# #     visited = [0] * N
+# #     t = 0
+# #     stack.append(i)
+# #     visited[i] = 0
+# #     while stack:
+# #         x = stack.pop(0)
+# #         t += building[x][0]
+# #         for j in range(N):
+# #             if built[x][j] == 1 and visited[j] == 0:
+# #                 visited[j] = 1
+# #                 stack.append(j)
+# #     time[i] = t
+#
+#
+# # for i in range(N):
+# #     stack = []
+# #     visited = [0] * N
+# #     order = []
+# #     stack.append(i)
+# #     visited[i] = 0
+# #     while stack:
+# #         x = stack.pop(0)
+# #         order.insert(0, x)
+# #         for j in range(N):
+# #             if built[x][j] == 1 and visited[j] == 0:
+# #                 visited[j] = 1
+# #                 stack.append(j)
+# #     time.append(order)
+# #
+# # print(time)
+#
+# stack = []
+# order = []
+# for i in range(N):
+#     come_in = 0
+#     for j in range(N):
+#         if built[j][i] == 1:
+#             come_in = 1
+#             break
+#     if come_in == 0:
+#         stack.append(i)
+#         order.append(i)
+#
+# while stack:
+#     x = stack.pop()
+#     built[x] = [0] * N
