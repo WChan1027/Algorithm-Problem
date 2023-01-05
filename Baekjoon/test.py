@@ -1,7 +1,2 @@
-b = []
-def a(n):
-    print(1)
-    for i in b:
-        a(i)
-
-a
+a = [(1, 2), (1, 2)]
+print(set(a))
