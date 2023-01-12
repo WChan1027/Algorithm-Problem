@@ -1,4 +1,3 @@
-a = '0011'
-
-print(set(a))
-print(a[1])
+a = [(100, 1), (70, 5), (80, 3)]
+print(a.sort())
+print(a)

@@ -7,45 +7,38 @@ input = sys.stdin.readline
 N = int(input())
 skill = list(map(int, input().split()))
 
-# com_skill = itertools.combinations(skill, N % 4)        # 혼자 치게 되는 사람의 조합
-# skill_diff = max(skill) * N                             # 실력 차의 합
-skill_sort = sorted(skill)
 
-matrix = [[] for _ in range(4)]
-idx = -1
-length = 1
+cnt = 0
+diff_sum = 0
+answer = []
 
-for i in range(N - 3):
-    idx += 1
-    if idx == 4:
-        idx = 0
-        length += 1
+while cnt < N%4:
+    skill_sort = sorted(skill)
+    skill_diff = [0] * (N - 3 - cnt)
+    skill_diff_result = [0] * (N - 4 - cnt)
 
-    value = skill_sort[i+3] - skill_sort[i]
-    matrix[idx].append(value)
+    for i in range(N - 3 - cnt):
+        skill_diff[i] = skill_sort[i+3] - skill_sort[i]
 
-print(matrix)
+    for i in range(N - 4 - cnt):
+        skill_diff_result[i] = (skill_diff[i+1] - skill_diff[i], i)
 
-answer = max(skill) * N
-answer_idx = []
+    skill_diff_result.sort(reverse=True)
 
-def check(result, n, m, change):            # change = [(n, m)]
-    global length, answer, answer_idx
-    if m == length:
-        if result < answer:
-            answer = result
-            temp = []
-            for i in change:
-                temp.append()
-            answer_idx = temp
+    del skill[skill_diff_result[0][1]+4]
+    answer.append(skill_diff_result[0][1]+4)
+    cnt += 1
 
-    for i in range(m+1):
-        if i != m:
-            check(result + )
+for i in range(0, len(skill) - 3, 4):
+    diff_sum += skill_sort[i+3] - skill_sort[i]
 
+print(diff_sum)
+print(answer)
 
 ## 재귀 함수 사용
 
+# com_skill = itertools.combinations(skill, N % 4)        # 혼자 치게 되는 사람의 조합
+# skill_diff = max(skill) * N                             # 실력 차의 합
 # alone_answer = []
 #
 # def check(com_skill, N):
@@ -87,6 +80,8 @@ def check(result, n, m, change):            # change = [(n, m)]
 
 ## combination 사용
 
+# com_skill = itertools.combinations(skill, N % 4)        # 혼자 치게 되는 사람의 조합
+# skill_diff = max(skill) * N                             # 실력 차의 합
 # for no_team in com_skill:
 #     team = skill_sort[:]
 #     result = 0
