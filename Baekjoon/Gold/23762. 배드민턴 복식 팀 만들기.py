@@ -29,9 +29,10 @@ while cnt < N%4:
     answer.append(skill_diff_result[0][1]+4)
     cnt += 1
 
+
 for i in range(0, len(skill) - 3, 4):
     diff_sum += skill_sort[i+3] - skill_sort[i]
-
+print(skill_sort)
 print(diff_sum)
 print(answer)
 
