@@ -13,18 +13,12 @@ while B > 0:
     if B < N:
         n -= 1
 
-    elif B == N:
-        result = (result * remain[n-1]) % C
-        B = 0
 
-    else:
-        B -= N
-        n += 1
-        result = (result * remain[n-1]) % C
-        if n == len(remain):
-            remain.append(result)
 
+print(remain)
 print(result)
+
+
 
 # remain = []
 # a = []
