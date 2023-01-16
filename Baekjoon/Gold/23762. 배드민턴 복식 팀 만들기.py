@@ -36,6 +36,7 @@ print(skill_sort)
 print(diff_sum)
 print(answer)
 
+
 ## 재귀 함수 사용
 
 # com_skill = itertools.combinations(skill, N % 4)        # 혼자 치게 되는 사람의 조합
