@@ -8,13 +8,24 @@ A, B, C = map(int, input().split())
 remain = [1, A % C]
 result = A
 n = 1
+
 while B > 0:
     N = 2 ** (n - 1)
     if B < N:
         n -= 1
-
-
-
+    elif B == N:
+        result = (result * remain[n]) % C
+        B -= N
+    else:
+        result = (result * remain[n]) % C
+        n += 1
+        if n >= len(remain):
+            remain.append(result)
+        B -= N
+        if B == N:
+            result = (result * remain[n-1]) % C
+            B = 0
+    print(B, result)
 print(remain)
 print(result)
 
