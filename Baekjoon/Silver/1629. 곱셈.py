@@ -6,66 +6,15 @@ input = sys.stdin.readline
 A, B, C = map(int, input().split())
 
 remain = [1, A % C]
-result = A
 n = 1
+B -= 1
 while B > 0:
-    N = 2 ** (n - 1)
-    if B < N:
-        n -= 1
-
-    elif B == N:
-        result = (result * remain[n-1]) % C
-        B = 0
-
-    else:
+    N = 2 ** (n-1)
+    if B >= N:
+        remain.append((remain[-1] * remain[n]) % C)
         B -= N
         n += 1
-        result = (result * remain[n-1]) % C
-        if n == len(remain):
-            remain.append(result)
+    else:
+        n -= 1
 
-print(result)
-
-# remain = []
-# a = []
-# result = 1
-# for i in range(B):
-#     result *= A
-#     if result >= C:
-#         result %= C
-#     if result in remain:
-#         a = remain[remain.index(result):]
-#     else:
-#         remain.append(result)
-#
-# if a:
-#     print(a[(B - len(remain) - len(a) - 1)%len(a)])
-# else:
-#     print(result)
-
-
-
-# remain = []
-#
-# def cal(result):
-#     result = (result * A) % C
-#     if result in remain:
-#         a = remain.index(result)
-#         return remain[a:]
-#     else:
-#         remain.append(result)
-#         return cal(result)
-#
-# c = cal(1)
-#
-# b = B - (len(remain) - len(c)) - 1
-# print(c[b%len(c)])
-
-
-
-# answer = 1
-# for i in range(B):
-#     answer *= A
-#     answer %= C
-#
-# print(answer)
+print(remain[-1])
