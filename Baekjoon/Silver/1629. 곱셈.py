@@ -13,6 +13,8 @@ while B > 0:
     if B >= N:
         remain.append((remain[-1] * remain[n]) % C)
         B -= N
+    else:
+        result = (result * remain[n]) % C
         n += 1
     else:
         n -= 1
