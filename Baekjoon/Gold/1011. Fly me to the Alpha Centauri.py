@@ -14,4 +14,13 @@ for test_case in range(T):
     while n*(n+1) < length:
         n += 1
 
-    print(2*n-1)
+    n -= 1
+
+    if n*(n+1) == length:
+        n *= 2
+    elif (n+1)*(n+1) >= length:
+        n = 2*n +1
+    else:
+        n = 2*n +2
+
+    print(n)
