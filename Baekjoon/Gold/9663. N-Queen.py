@@ -7,6 +7,38 @@ N = int(input())
 
 answer = 0
 
+column = [0] * N
+
+def queen(row, n, queens):
+    global answer
+    if n == N:
+        for i in range(N):
+            if column[i] == 0 and check(queens, (row, i)) == 1:
+                answer += 1
+        return
+
+    for i in range(N):
+        if column[i] == 0 and check(queens, (row, i)) == 1:
+            column[i] = 1
+            queen(row + 1, n+1, queens + [(row, i)])
+            column[i] = 0
+
+def check(arr, new):
+    new_x, new_y = new
+    for i in arr:
+        x, y = i
+        if x == new_x or abs(new_x - x) == abs(new_y - y):
+            return 0
+
+    return 1
+
+queen(0, 1, [])
+
+print(answer)
+
+
+
+
 # rows = [0] * N
 #
 # def queen(n):
@@ -59,35 +91,6 @@ answer = 0
 # queen(0)
 # print(answer)
 
-
-column = [0] * N
-
-def queen(row, n, queens):
-    global answer
-    if n == N:
-        for i in range(N):
-            if column[i] == 0 and check(queens, (row, i)) == 1:
-                answer += 1
-        return
-
-    for i in range(N):
-        if column[i] == 0 and check(queens, (row, i)) == 1:
-            column[i] = 1
-            queen(row + 1, n+1, queens + [(row, i)])
-            column[i] = 0
-
-def check(arr, new):
-    new_x, new_y = new
-    for i in arr:
-        x, y = i
-        if x == new_x or abs(new_x - x) == abs(new_y - y):
-            return 0
-
-    return 1
-
-queen(0, 1, [])
-
-print(answer)
 
 
 
