@@ -1,4 +1,4 @@
-# https://www.acmicpc.net/contest/problem/956/2
+# https://www.acmicpc.net/problem/27513
 import sys
 sys.stdin = open('input.txt')
 input = sys.stdin.readline
