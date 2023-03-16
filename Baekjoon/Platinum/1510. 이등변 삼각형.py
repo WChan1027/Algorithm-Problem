@@ -43,3 +43,54 @@ for triangle in combinations(dots, 3):
                     answer += 1
 
 print(answer)
+#
+# n = [[0] * (M+1) for _ in range(N+1)]
+# n[2][2] = 4
+#
+# for i in range(3, N+1):
+#     n[i][2] = n[i-1][2] * 2 - n[i-2][2]
+#
+#     if i % 2 == 1:
+#         n[i][2] += 2
+#
+# for i in range(3, M+1):
+#     n[2][i] = n[2][i-1] * 2 - n[2][i-2]
+#
+#     if i % 2 == 1:
+#         n[2][i] += 2
+#
+# for i in range(3, N+1):
+#     for j in range(3, M+1):
+#         n[i][j] += n[i-1][j-1]
+#         n[i][j] += (n[i-1][j] - n[i-2][j]) * 2
+#         n[i][j] += (n[i][j-1] - n[i][j-2]) * 2
+#
+#
+#         if i % 2 == 1:
+#             n[i][j] += 2
+#
+#         if j % 2 == 1:
+#             n[i][j] += 2
+#
+#         if i == j:
+#             n[i][j] += (j-2) * 4
+#             n[i][j] += 4
+#         else:
+#             if i > 2 and j > 2:
+#                 if 2*j > i or 2*i > j:
+#                     n[i][j] += 4
+#
+# for a in n:
+#     print(*a)
+
+
+
+# num = [[0] * (M+1) for _ in range(N+1)]
+# num[2][2] = 4
+#
+# for i in range(3, M):
+#     for j in range(2, i+1):
+#         num[2][i] += n[2][j] * (i+1-j)
+#
+# for a in num:
+#     print(*a)
