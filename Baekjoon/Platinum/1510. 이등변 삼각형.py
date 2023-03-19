@@ -62,6 +62,12 @@ for i in range(2, N+1):
         if i == j:
             new[i][j] += (i-1) * 4
             new[i][j] += (i//2-1) * 4
+
+            for x in range(1, i):
+                l = (2*(i-1)*x) ** (1/2)
+                if l != (i-x) and l < (i-1) and not l % 1:
+                    print(i, x, l)
+                    new[i][j] += 8
         else:
             if abs(i - j) < min(i-1, j-1):
                 new[i][j] += 4
@@ -76,7 +82,7 @@ for i in range(2, N+1):
             if not c % 1:
                 new[i][j] += 4
 
-            for x in range(1, a):
+            for x in range(1, a+1):
                 d = ((b ** 2 + x ** 2) - (a ** 2)) ** (1/2)
                 if not d % 1 and d < b:
                     new[i][j] += 4
@@ -85,13 +91,15 @@ for i in range(2, N+1):
                 if not e % 1 and e < b:
                     new[i][j] += 4
 
-                # for y in range(1, b):
-                #     if (a ** 2 + y ** 2) == ((a - x) ** 2) + ((b - y) ** 2):
-                #         new[i][j] += 4
+
+                f = ((a ** 2 + x ** 2) - ((b - x) ** 2))
+                if f > 0:
+                    f = f  ** (1 / 2)
+                    if not f % 1 and int(f) != x and f < a:
+                        new[i][j] += 4
 
         if i % 2:
             new[i][j] += 2
-
         if j % 2:
             new[i][j] += 2
 
