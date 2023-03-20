@@ -68,35 +68,51 @@ for i in range(2, N+1):
                 if l != (i-x) and l < (i-1) and not l % 1:
                     print(i, x, l)
                     new[i][j] += 8
+
+
         else:
-            if abs(i - j) < min(i-1, j-1):
-                new[i][j] += 4
 
-            a, b = min(i-1, j-1), max(i-1, j-1)
-            theta = math.atan(a/b)
-            x = a / math.sin(2 * theta)
-            if not x % 1:
-                new[i][j] += 4
 
-            c = (b ** 2 - a ** 2) ** (1/2)
-            if not c % 1:
-                new[i][j] += 4
 
-            for x in range(1, a+1):
-                d = ((b ** 2 + x ** 2) - (a ** 2)) ** (1/2)
-                if not d % 1 and d < b:
+            # if abs(i - j) < min(i-1, j-1):
+            #     new[i][j] += 4
+            #
+            # a, b = min(i-1, j-1), max(i-1, j-1)
+            # theta = math.atan(a/b)
+            # x = a / math.sin(2 * theta)
+            # if not x % 1:
+            #     new[i][j] += 4
+            #
+            # c = (b ** 2 - a ** 2) ** (1/2)
+            # if not c % 1:
+            #     new[i][j] += 4
+            #
+            # for x in range(1, a+1):
+            #     d = ((b ** 2 + x ** 2) - (a ** 2)) ** (1/2)
+            #     e = ((b ** 2 + x ** 2) - ((a - x) ** 2)) ** (1 / 2)
+            #     f = ((a ** 2 + x ** 2) - ((b - x) ** 2))
+            #     h = ((a ** 2 + b ** 2) - x ** 2) / (2*b)
+            #     if not d % 1 and d < b:
+            #         new[i][j] += 4
+            #
+            #     elif not e % 1 and e < b:
+            #         new[i][j] += 4
+            #
+            #     elif f > 0:
+            #         f = f ** (1 / 2)
+            #         if not f % 1 and int(f) != x and f < a:
+            #             new[i][j] += 4
+            #
+            #     elif x < a and int(h) != b and int(h) != a and not h % 1 and h < b:
+            #         # print(a, b, x, h)
+            #         new[i][j] += 4
+
+            middle = b/2
+            for x in range(int(middle)):
+                g = a/2 + (middle - x) * (b / a)
+                if not g % 1 and g < a:
                     new[i][j] += 4
 
-                e = ((b ** 2 + x ** 2) - ((a - x) ** 2)) ** (1 / 2)
-                if not e % 1 and e < b:
-                    new[i][j] += 4
-
-
-                f = ((a ** 2 + x ** 2) - ((b - x) ** 2))
-                if f > 0:
-                    f = f  ** (1 / 2)
-                    if not f % 1 and int(f) != x and f < a:
-                        new[i][j] += 4
 
         if i % 2:
             new[i][j] += 2
@@ -105,10 +121,8 @@ for i in range(2, N+1):
 
 
 
-
 for a in new:
     print(*a)
-
 
 answer = 0
 for i in range(1, N + 1):
