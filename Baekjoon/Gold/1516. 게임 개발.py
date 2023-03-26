@@ -19,7 +19,6 @@ for i in range(1, N+1):
         else:
             graph[i].append(j)
             cnt[i] += 1
-
 queue = deque()
 for i in range(1, N+1):
     if cnt[i] == 0:
@@ -36,8 +35,6 @@ while queue:
                 queue.append(next)
         if next in graph[now]:
             t = max(time[next], t)
-
     time[now] += t
-
 for i in time[1:]:
     print(i)
