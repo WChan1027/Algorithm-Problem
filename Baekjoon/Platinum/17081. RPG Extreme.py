@@ -115,7 +115,7 @@ for action in actions:
         # 전투
         continue
 
-
+print(monsters)
 
 for floor in dungeon:
     print(''.join(floor))
