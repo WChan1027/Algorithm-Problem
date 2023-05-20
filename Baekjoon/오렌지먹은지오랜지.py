@@ -3,12 +3,23 @@ sys.stdin = open('input.txt')
 input = sys.stdin.readline
 
 N = int(input())
-word = input()
+sentence = input()
 
-def orange(word, N):
+def is_orange(word1, word2, length):
+    diff = 0
+    for i in range(length):
+        if word1[i] != word2[i]:
+            diff += 1
+            if diff > 1:
+                return
 
+    if diff == 1:
+        return True
 
-if orange(word, N) == 1:
-    print('YES')
-else:
-    print('NO')
+answer = 'NO'
+for idx in range(1, N):
+    if is_orange(sentence[:idx], sentence[N - idx:], idx):
+        answer = 'YES'
+        break
+
+print(answer)

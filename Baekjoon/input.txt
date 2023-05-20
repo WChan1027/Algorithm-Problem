@@ -1,2 +1,2 @@
-14
-aaaaaabaaaaaaa
+3
+8 3 6

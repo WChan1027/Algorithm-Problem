@@ -1,48 +1,48 @@
 # https://www.acmicpc.net/problem/7576
-
 import sys
-from collections import deque
 sys.stdin = open('input.txt')
+input = sys.stdin.readline
+from collections import deque
 
-M, N = map(int, sys.stdin.readline().split())
+M, N = map(int, input().split())
 
-tomato = [list(map(int, sys.stdin.readline().split())) for _ in range(N)]
+tomato = [list(map(int, input().split())) for _ in range(N)]
 
-visited = [[-1]*M for _ in range(N)]
-stack = deque()
-unripe = 0
-for m in range(M):
-    for n in range(N):
-        if tomato[n][m] == 1:
-            stack.append((n, m))
-            visited[n][m] = 0
-
-        elif tomato[n][m] == -1:
-            visited[n][m] = 1
-
-        else:
-            unripe += 1
-
+visited = [[-1] * M for _ in range(N)]  # 토마토가 익었는지 확인하기 위한 리스트
 direction = [(1, 0), (-1, 0), (0, 1), (0, -1)]
+que = deque()
 
-if unripe == 0:
-    print(0)
+unripe = 0                              # 익지 않은 토마토 수
+for i in range(N):
+    for j in range(M):
+        if tomato[i][j] == 1:           # 익은 토마토
+            visited[i][j] = 0           # 익은 날짜 : 0일차
+            que.append((i, j))          # 익은 토마토 위치 기록
 
-else:
-    count = 0
-    while stack:
-        ripe_y, ripe_x = stack.popleft()
-        for i in range(4):
-            next_ripe_x = ripe_x + direction[i][0]
-            next_ripe_y = ripe_y + direction[i][1]
-            if 0 <= next_ripe_x < M and 0 <= next_ripe_y < N:
-                if visited[next_ripe_y][next_ripe_x] == -1:
-                    stack.append((next_ripe_y, next_ripe_x))
-                    visited[next_ripe_y][next_ripe_x] = visited[ripe_y][ripe_x] + 1
-                    count += 1
+        elif tomato[i][j] == -1:        # 빈 칸
+            visited[i][j] = -2
 
-    if count == unripe:
-        print(visited[ripe_y][ripe_x])
+        else:                           # 익지 않은 토마토
+            unripe += 1                 # 익지 않은 토마토 +1
 
-    else:
-        print(-1)
+if unripe == 0:                         # 익지 않은 토마토가 없으면
+    print(0)                            # 0 출력
+
+else:                                   # 익지 않은 토마토가 있으면
+    cnt = 0                             # 새로 익는 토마토 수
+    while que:
+        now_x, now_y = que.popleft()    # 현재 토마토 위치
+        for dir in direction:
+            next_x = now_x + dir[0]
+            next_y = now_y + dir[1]
+            if 0 <= next_x < N and 0 <= next_y < M:
+                if visited[next_x][next_y] == -1:
+                    que.append((next_x, next_y))                            # 새로 익은 토마토 위치 기록
+                    visited[next_x][next_y] = visited[now_x][now_y] + 1     # 토마토가 익은 날짜 기록
+                    cnt += 1                                                # 새로 익은 토마토 +1
+
+    if cnt == unripe:                                                       # 토마토가 모두 익었으면
+        print(visited[now_x][now_y])                                        # 마지막으로 토마토가 익은 날짜 출력
+
+    else:                                                                   # 익지 않은 토마토가 있으면
+        print(-1)                                                           # -1 출력
