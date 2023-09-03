@@ -9,6 +9,7 @@ que = deque()
 rotate = 0
 b = 0
 w = 0
+
 for case in range(Q):
     order = list(map(str, input().split()))
     if order[0] == 'push':
@@ -33,6 +34,21 @@ for case in range(Q):
                 b -= 1
             else:
                 w -= 1
+                if rotate == 90:
+                    while que:
+                        if que[0] == 'b':
+                            que.popleft()
+                            b -= 1
+                        else:
+                            break
+
+                elif rotate == 270:
+                    while que:
+                        if que[-1] == 'b':
+                            que.pop()
+                            b -= 1
+                        else:
+                            break
 
     elif order[0] == 'rotate':
         if order[1] == 'l':
@@ -49,7 +65,7 @@ for case in range(Q):
                     else:
                         break
 
-            if rotate == 270:
+            elif rotate == 270:
                 if w == 0:
                     que = deque()
                     b = 0

@@ -1,17 +1,4 @@
-'''
 https://www.acmicpc.net/problem/4179
-
-[문제]
-
-지훈이는 미로에서 일을 한다. 지훈이를 미로에서 탈출하도록 도와주자!
-미로에서의 지훈이의 위치와 불이 붙은 위치를 감안해서 지훈이가 불에 타기전에 탈출할 수 있는지의 여부,
-그리고 얼마나 빨리 탈출할 수 있는지를 결정해야한다.
-지훈이와 불은 매 분마다 한칸씩 수평또는 수직으로(비스듬하게 이동하지 않는다) 이동한다.
-불은 각 지점에서 네 방향으로 확산된다.
-지훈이는 미로의 가장자리에 접한 공간에서 탈출할 수 있다.
-지훈이와 불은 벽이 있는 공간은 통과하지 못한다.
-
-'''
 import sys
 from collections import deque
 
@@ -60,7 +47,7 @@ for i in fire:      # 출구에서 모든 불까지의 최단 거리 구하기
     [fire_x, fire_y] = i[0], i[1]
     distance(fire_x, fire_y, fire_goal)
 
-answer = 1041583437     # 내 전화번호
+answer = float('INF')
 
 for i in jihoon_goal.keys():        # 어떤 출구까지 지훈이가 걸리는 시간에 대하여
     if jihoon_goal[i] < answer:     # 저장된 값보다 빨리 도착하는 출구라면
@@ -71,7 +58,7 @@ for i in jihoon_goal.keys():        # 어떤 출구까지 지훈이가 걸리는
         else:       # 불이 도달하지 못하는 출구면
             answer = jihoon_goal[i]     # 답으로 저장
 
-if answer == 1041583437:        # 탈출할 수 없으면
+if answer == float('INF'):        # 탈출할 수 없으면
     print('IMPOSSIBLE')     # IMPOSSIBLE 출력
 else:       # 탈출 가능하면
     print(answer)       # 최소값 출력
