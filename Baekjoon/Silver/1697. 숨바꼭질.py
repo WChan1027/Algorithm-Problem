@@ -1,40 +1,29 @@
-# https://www.acmicpc.net/problem/1697
 import sys
 from collections import deque
 sys.stdin = open('input.txt')
 
-
 N, K = map(int, sys.stdin.readline().split())
 
 if N >= K:
-    print(N - K)
+    answer = N - K
 
 else:
-    time = [-1] * 100001
+    visited = [-1 for _ in range(100001)]
+    visited[N] = 0
+    queue = deque()
+    queue.append((N, 0))
+    answer = 0
 
-    stack = deque()
-    stack.append(N)
-    time[N] = 0
+    while not answer:
+        now, time = queue.popleft()
+        next = [now + 1, now - 1, now * 2]
+        for i in next:
+            if i == K:
+                answer = time + 1
+                break
 
-    while stack:
-        locate = stack.popleft()
+            elif 0 <= i <= 100000 and visited[i] == -1:
+                queue.append((i, time + 1))
+                visited[i] = time + 1
 
-        if locate == K:
-            break
-
-        next_locate = locate * 2
-        if 0 < next_locate <= 100000 and time[next_locate] == -1:
-            time[next_locate] = time[locate] + 1
-            stack.appendleft(next_locate)
-
-        next_locate = locate - 1
-        if 0 <= next_locate <= 100000 and time[next_locate] == -1:
-            time[next_locate] = time[locate] + 1
-            stack.append(next_locate)
-
-        next_locate = locate + 1
-        if 0 <= next_locate <= 100000 and time[next_locate] == -1:
-            time[next_locate] = time[locate] + 1
-            stack.append(next_locate)
-
-    print(time[K])
+print(answer)

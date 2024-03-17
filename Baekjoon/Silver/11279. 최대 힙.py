@@ -1,4 +1,3 @@
-# https://www.acmicpc.net/problem/11279
 import sys
 import heapq
 sys.stdin = open('input.txt')
@@ -10,10 +9,4 @@ heap = []
 
 for _ in range(N):
     x = int(input())
-    if x == 0:
-        if heap:
-            print(heapq.heappop(heap)[1])
-        else:
-            print(0)
-    else:
-        heapq.heappush(heap, (-x, x))
+    heapq.heappush(heap, (-x, x)) if x else print(heapq.heappop(heap)[1]) if heap else print(0)

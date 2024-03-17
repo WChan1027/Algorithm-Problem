@@ -14,7 +14,6 @@ for _ in range(N):
 
 end = 0
 answer = 0
-
 for _ in range(N):
     time = heapq.heappop(meeting)
     if time[1] >= end:
